@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/dashboard.css" />
+    <link rel="icon" href="./Images/fav_icon-bg.png" />
+    <script
+      src="https://kit.fontawesome.com/714346974b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    
+    <title>Dashboard</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Loader -->
+    <link rel="stylesheet" href="./Style/loaderTornado.css" />
+    <script src="./Scripts/loaderTornado.js"></script>
+    <!-- Loader End-->
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav>
+      <i class="fa-solid fa-bars" id="hamburger"></i>
+      <div id="nav_right_side">
+        <div id="brand_name">
+          <a href="#" class="indexstyle1"
+            ><img
+              src="./images/logo.jpg"
+              alt=""
+              height="100%"
+              width="100% "
+          /></a>
+        </div>
+      </div>
+      <div id="nav_left_side">
+        <div>
+          <i class="fa-solid fa-video"></i
+          ><span
+            ><a
+              href="#"
+              class="indexstyle"
+              >Video Call</a
+            >
+          </span>
+        </div>
+        <div>
+          <i class="fa-solid fa-video"></i
+          ><span
+            ><a
+              href="#"
+              class="indexstyle"
+              >Screen Share</a
+            >
+          </span>
+        </div>
+        <div>
+          <i class="fa-solid fa-message"></i
+          ><span
+
+            ><a
+              href="#"
+              class="indexstyle"
+              >Message</a
+            >
+
+          </span>
+        </div>
+        <div>
+          <i class="fa-solid fa-user"></i
+          ><span><a id="name-user" href="#" class="indexstyle"></a> </span>
+        </div>
+      </div>
+    </nav>
+    <div id="burger">
+      <div class="burger_inside" id="vc">Video Call</div>
+      <div class="burger_inside" id="ss">Screen Share</div>
+      <div class="burger_inside" id="msg">Message</div>
+      <div class="burger_inside" id="hm">Home</div>
+    </div>
+
+    <br /><br />
+    <!-- main content -->
+    <div id="main_dashboard">
+      <div id="ïmg1">
+        <img
+          class="img1_main"
+          src="https://cdn.dribbble.com/users/2424870/screenshots/9659021/________-1.gif"
+          alt=""
+        />
+      </div>
+      <div id="main_img_info">
+        <a href="#">
+          <div class="div_img_info">
+            <img
+              class="img_info"
+              src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2021_19/3474516/210513-waving-goodbye-zoom-main-cs.gif"
+              alt=""
+            />
+            <p>Video Call</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="div_img_info">
+            <img
+              class="img_info"
+              src="https://res.cloudinary.com/mitchlacey/image/upload/dpr_auto,w_900,q_60/v1601741145/Online-Training_t4zhmt.png"
+              alt=""
+            />
+            <p>Screen Share</p>
+          </div></a
+        >
+        <a href="#">
+          <div class="div_img_info">
+            <img
+              class="img_info"
+              src="https://i.pinimg.com/originals/97/56/c2/9756c2a05e2dd85309fe4b3bc5d62357.gif"
+              alt=""
+            />
+            <p>Message</p>
+          </div>
+        </a>
+          <spam>
+          <div class="div_img_info" id="logout">
+            <img
+              class="img_info"
+              src="https://2.bp.blogspot.com/-opW126zLlUA/T80N-X5JU7I/AAAAAAAAAEU/LprSqU44ltQ/s1600/bye.gif"
+              alt=""
+            />
+            <p>Logout</p>
+          </div>
+        </spam>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
