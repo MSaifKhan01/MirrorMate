@@ -1,0 +1,333 @@
+#nav{
+    width: 100%;
+    height: 90px;
+    /* border: 3px solid black; */
+    display: flex;
+    background-color: rgb(12, 12, 14);
+    
+}
+
+a{
+    color: rgb(242, 246, 242);
+    background-color: transparent;
+    text-decoration: none;
+    font-size: medium;
+}
+.logo{
+  width: 10%;
+  height: 90px;
+  /* border: 2px solid black; */
+  margin-left: 50px;
+  cursor: pointer;
+}
+.logo >.logoimg img{
+    width: 95%;
+    height: 90px;
+}
+.navele{
+    margin: auto;
+    width: 30%;
+    height: 90px;
+    padding-left: 150px;
+    margin-left:180px;
+    align-items: center;
+    display:flex;
+    justify-content: space-between;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.navele{
+   transition: transform .2s;
+   margin: 0 auto;
+}
+.navele:hover {
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.3); 
+}
+.navtxt{
+    text-decoration: none;
+    font-size: 15px;
+   }
+  .navtxt:hover{
+    color:royalblue
+  } 
+
+
+.bar{
+    width: 270px;
+    height: 60px;
+    /* border: 2px solid blue; */
+    margin-right: 85px;
+    align-items: center;
+    margin-top: 15px;
+    display: flex;
+    font-size: medium;
+}
+
+
+
+  .login{
+    padding: 15px 32px;
+    background-color: rgba(22,125,200,1);
+    /* text-decoration: none; */
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  .login:hover{
+    transform: scale(0.8);
+    }
+
+.signup{
+    padding: 15px 32px;
+    background-color:rgba(22,125,200,1);
+    /* text-decoration: none; */
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+   }
+   .signup:hover{
+    transform: scale(0.8);
+    }
+   /* nav css complete here */
+   #head{
+    text-align: center;
+    padding-top: 100px;
+    background-color: rgb(12, 12, 14);
+    padding-bottom: 50px;
+    
+   }
+   h1{
+    color: aliceblue;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-bottom: 15px;
+  text-shadow: 2px 2px rgba(22,125,200,1)
+   }
+   span{
+    color: rgba(22,125,200,1);
+    
+  text-shadow: 2px 2px black
+   }
+   p{
+    color: aliceblue;
+    padding-bottom: 40px;
+   }
+ #try{
+background-color:rgba(22,125,200,1) ;
+padding: 15px 32px;
+
+/* text-decoration: none; */
+color: white;
+border-radius: 10px;
+text-decoration: none;
+}
+#try:hover{
+  transform: scale(0.8);
+  }
+ 
+  /* head part end here */
+
+
+
+
+ #image{
+  background-color:  rgb(12, 12, 14);
+  display:block;
+  text-align: center;
+  width:100%;
+  height:550px;
+  margin: auto;
+  
+}
+ #ab{
+  background-color: rgb(30, 38, 47);
+  width:10%;
+  height:450px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  margin-right: 50px;
+  border-radius: 20px;
+  
+}
+#img{
+  width:40px;
+  height:40px;
+  margin: auto;
+}
+ #xyz{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(12, 12, 14);
+ margin: auto;
+  width:90%;
+  height:500px;
+  border-radius: 20px;
+  box-shadow: rgba(22,125,200,1)  0px 22px 70px 4px;
+  border:5px solid;
+  border-width: 10px;
+  }
+
+ #ac{
+  background-color:rgb(12, 12, 14);
+  width:50%;
+  height:450px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 20px;
+  border:5px solid;
+  border-width: 5px;
+ }
+#animie{
+  width:100%;
+  height: 200px;
+
+}
+#animie img{
+  width:80%;
+  height: 250px;
+  padding-top: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 20px;
+  border:5px solid;
+  border-width: 2px;
+}
+#three{
+  display:flex;
+  flex-direction:row;
+  padding-top:80px;
+  justify-content: space-around;
+}
+#three div{
+  width:fit-content;
+  height:fit-content
+}
+#three div img{
+  width:175px;
+  height:150px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 20px;
+  border:5px solid;
+  border-width: 2px;
+}
+
+
+  #ad{
+    background-color:rgb(12, 12, 14);
+    width:30%;
+    height:450px;
+    margin-top: 20px;
+    
+  
+   }
+#part{
+  display:flex;
+  flex-direction: column;
+  width:320px;
+  height:450px;
+  margin: auto;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 20px;
+  border:5px solid;
+  border-width: 5px;
+  
+}
+#part img{
+  width:300px;
+  height:280px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  border-radius: 20px;
+}
+   #part input[type=text] {
+    /* float: right; */
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    padding-bottom: 10px;
+    font-size: 17px;
+  }
+  #part h2{
+    color: aliceblue;
+  }
+
+  /* image part complete here */
+  
+  #company{
+    display: flex;
+    width: 100%;
+    height:200px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 50px;
+    background-color: rgb(12, 12, 14)
+
+  }
+  #company div{
+    width:20%;
+    height:150px;
+    background-color: rgb(12, 12, 14);
+    margin: auto;
+    text-align: center;
+    
+  }
+  #company img{
+    width:200px;
+    height:100px;
+    margin: auto;
+  }
+  #company h2{
+    color: aliceblue;
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+  /* company part complete here */
+  #secpart{
+    width:100%;
+    height:450px;
+    background-color:rgb(12, 12, 14);
+    
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #first{
+    width:40%;
+    height:400px;
+    background-color: rgb(12, 12, 14);
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  #explore{
+    padding: 15px 32px;
+    background-color: rgba(22,125,200,1);
+    /* text-decoration: none; */
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  #explore:hover{
+    transform: scale(0.8);
+    }
+  #sec{
+    width:50%;
+    height:400px;
+    background-color: antiquewhite;
+    /* padding-top: 20px;
+    padding-right: 20px; */
+
+  }
+  #sec img{
+    width:100%;
+    height:400px;
+    box-shadow: rgb(38, 57, 77) 0px 22px 70px 4px;
+  }
+/* SEC PART COMPLETE HERE */
