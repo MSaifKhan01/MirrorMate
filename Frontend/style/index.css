@@ -198,6 +198,9 @@ text-decoration: none;
   border:5px solid;
   border-width: 2px;
 }
+#animie img:hover{
+  transform: scale(0.8)
+}
 #three{
   display:flex;
   flex-direction:row;
@@ -215,6 +218,9 @@ text-decoration: none;
   border-radius: 20px;
   border:5px solid;
   border-width: 2px;
+}
+#three div img:hover{
+  transform: scale(0.8)
 }
 
 
@@ -245,6 +251,9 @@ text-decoration: none;
   padding-bottom: 20px;
   
   border-radius: 20px;
+}
+#part img:hover{
+  transform: scale(0.8)
 }
    #part input[type=text] {
     /* float: right; */
@@ -330,4 +339,177 @@ text-decoration: none;
     height:400px;
     box-shadow: rgb(38, 57, 77) 0px 22px 70px 4px;
   }
+  #sec img:hover{
+    transform: scale(0.8)
+  }
 /* SEC PART COMPLETE HERE */
+#smile{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(12, 12, 14);
+  justify-content: space-around;
+}
+#fir{
+  display: flex;
+  flex-direction:row;
+background-color: rgb(12, 12, 14);
+justify-content: space-between;
+}
+#fir1{
+  background-color: rgb(12, 12, 14);
+  width:650px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+#fir1 img{
+  width:530px;
+  border-radius: 20px;
+  height: 430px;
+  margin-left: 50px;
+  margin-top: 60px;
+  box-shadow: rgb(38, 57, 77) 0px 22px 70px 4px;
+  box-shadow:  rgb(38, 57, 77)  0px 22px 70px 4px;
+}
+#fir1 img:hover{
+  transform: scale(0.8);
+  }
+#fir2{
+width:100px;
+margin-left: 50px;
+background-color: rgb(12, 12, 14);
+text-align: center;
+border-radius: 20px;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+#fir2 p{
+  font-size:xx-large;
+
+}
+#fir2 p:hover{
+  transform: scale(0.8);
+  }
+#secc{
+  background-color: rgb(12, 12, 14);
+  width:500px;
+  border-radius: 20px;
+  text-align:left;
+  
+
+}
+#secc h1{
+  margin-left: 50px;
+}
+#secc p{
+  margin-left: 50px;
+  font-size: medium;
+}
+#learn{
+  padding: 15px 32px;
+  background-color:rgba(22,125,200,1);
+  /* text-decoration: none; */
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-left: 50px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+ }
+ #learn:hover{
+  transform: scale(0.8);
+  }
+  /* smile part end */
+  #last{
+    display:flex;
+    flex-direction: row;
+    background-color: rgb(12, 12, 14);
+    justify-content: space-around;
+  }
+  #last1{
+    background-color: rgb(12, 12, 14);
+    width: 550px;
+    margin-top: 50px;
+  }
+  #last1 h1{
+    margin-left: 50px;
+  }
+  #last1 p{
+    margin-left: 50px;
+    font-size: medium;
+  }
+  #last2 img{
+    border-radius: 50px;
+    margin-top: 50px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  #last2 img:hover{
+    transform: scale(0.8)
+  }
+  /* last part complete here */
+  
+  
+  
+
+.theend{
+    width: 100%;
+    height: 350px;
+    /* border: 2px solid pink; */
+    margin: auto;
+    padding-top: 150px;
+   background-color: rgb(12, 12, 14); 
+}
+.theendcard{
+width: 600px;
+height: 350px;
+/* border: 2px solid green; */
+margin: auto;
+}
+.lastcard{
+margin: auto;
+/* border: 5px solid blue; */
+padding-left: 200px;
+cursor: pointer;
+}
+.lastcard img{
+width: 190px;
+height: 100px;
+padding-left: 22px;
+}
+.lastcard img:hover{
+  transform: scale(0.8)
+}
+.lastcard1 :nth-child(2){
+width: 240px;
+padding-left: 25px;
+cursor: pointer;
+
+
+}
+.lastcard1 :nth-child(1){
+width: 218px;
+padding-left: 80px;
+cursor: pointer;
+
+
+}
+.lastcard1 p{
+text-align: center;
+padding-right: 45px;
+color: white;
+}
+
+.foot{
+font-size: medium;
+cursor: pointer; 
+}
+.foot1{
+font-size: medium;
+color: white;
+}
+.foot:hover{
+color: rgb(2, 231, 48);
+color: rgb(241, 103, 11);
+}
+.navtxt{
+text-decoration: none;
+font-size: medium;
+}
+
+/* footer css completes here  */
