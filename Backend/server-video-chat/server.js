@@ -1,29 +1,50 @@
-const express=require('express');
+const express = require('express');
 require('dotenv').config();
 const { v4: uuidv4 } = require('uuid');
+const cors = require('cors')
 
-const app=express();
+
+const app = express();
 app.use(express.json())
-app.set("view engine","ejs")
+app.use(cors())
+
+app.set("view engine", "ejs")
 app.use(express.static('public'))
 
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.redirect(`/${uuidv4()}`)
 })
 
-app.get('/:room',(req,res)=>{
-    res.render("room",{roomId: req.params.room})
+app.get('/:room', (req, res) => {
+    res.render("room", { roomId: req.params.room })
 })
 
 
-const port=process.env.PORT||8080
-const server=app.listen(port,()=>{
-    console.log(`Video Call Server is running at PORT ${port}`)
+
+const server = app.listen(process.env.port, () => {
+    console.log(`Video Call Server is running at PORT ${process.env.port}`)
 })
 
-const io=require('socket.io')(server)
+const io = require('socket.io')(server)
 
-io.on('connection',(socket)=>{
-    console.log("New Connection at "+socket.id)
+// Peer
+
+const { ExpressPeerServer } = require("peer");
+const peerServer = ExpressPeerServer(server, {
+    debug: true,
+});
+app.use("/peerjs", peerServer);
+
+io.on('connection', (socket) => {
+    console.log("New Connection at " + socket.id)
+    socket.on("join-room", (roomId, userId) => {
+        socket.join(roomId);
+        socket.to(roomId).emit("user-connected", userId);
+
+        socket.on("message", (message) => {
+            io.to(roomId).emit("createMessage", message);
+        });
+    });
 })
+
