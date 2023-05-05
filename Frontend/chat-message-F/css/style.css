@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 :root {
-  --dark-color-a: #765A4A;
+  /* --dark-color-a: #765A4A; */
+  --dark-color-a: #110a0d;
   --dark-color-b: #A08A7B;
   --light-color: #fafafa;
   --success-color: #5cb85c;
@@ -17,7 +18,9 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  background:linear-gradient(to bottom, rgba(228, 227, 228, 0.486), rgba(219, 226, 239, 0.658)),url('../Images/background.jpg');
+  /* background:linear-gradient(to bottom, rgba(228, 227, 228, 0.486), rgba(219, 226, 239, 0.658)),url('../Images/background.jpg'); */
+
+  background:linear-gradient(to bottom, rgba(228, 227, 228, 0.486), rgba(219, 226, 239, 0.658)),url('./body_chat-background.jpg');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
