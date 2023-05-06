@@ -36,10 +36,11 @@ io.on("connection",(socket)=>{
      
 
       // getting room users.
-         io.to(room).emit("allusers",{
-            room:user.room,
-            users:getRoomUsers(user.room)
-         })
+      io.to(user.room).emit("allusers",getRoomUsers(room))
+   //       io.to(room).emit("allusers",{
+   //          room:user.room,
+   //          users:getRoomUsers(user.room)
+   //       })
     });
 
      socket.on("chatmessage",(msg)=>{
@@ -67,12 +68,13 @@ io.on("connection",(socket)=>{
     room:user.room,
     users:getRoomUsers(user.room)
  })
+// io.to(user.room).emit("allusers",getRoomUsers(room))
  
         })
 })
 
 
-const PORT = 8081;
+const PORT = 8082;
 
 server.listen(PORT, ()=>{
     console.log("server is running on port"+PORT)

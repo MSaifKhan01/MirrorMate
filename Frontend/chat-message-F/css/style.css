@@ -2,8 +2,11 @@
 
 :root {
   /* --dark-color-a: #765A4A; */
-  --dark-color-a: #110a0d;
-  --dark-color-b: #A08A7B;
+  /* --dark-color-a: #110a0d; */
+  /* --dark-color-b: #110a0d; */
+  --dark-color-a:rgb(12, 12, 14);
+  --dark-color-b:rgb(12, 12, 14);
+  /* --dark-color-b: #A08A7B; */
   --light-color: #fafafa;
 
 
@@ -22,13 +25,14 @@ body {
   font-size: 16px;
   /* background:linear-gradient(to bottom, rgba(228, 227, 228, 0.486), rgba(219, 226, 239, 0.658)),url('../Images/background.jpg'); */
 
-  background:linear-gradient(to bottom, rgba(228, 227, 228, 0.486), rgba(219, 226, 239, 0.658)),url('./body_chat-background.jpg');
+  /* background:linear-gradient(to bottom, rgba(228, 227, 228, 0.486), rgba(219, 226, 239, 0.658)),url('./body_chat-background.jpg'); */
+  background: url('./body_chat-background.jpg');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
 
 
-  
+
   margin: 20px;
   height: 100vh;
 }
@@ -55,6 +59,7 @@ a {
 .chat-container {
   max-width: 1100px;
   background: #fff;
+  /* color: rgba(22,125,200,1); */
   margin: 30px auto;
   overflow: hidden;
   border-radius: 10px;
@@ -65,7 +70,8 @@ a {
 
 .chat-header {
   background: var(--dark-color-a);
-  color: #fff;
+  /* color: #fff; */
+  color: rgba(22,125,200,1);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding: 15px;
@@ -81,11 +87,20 @@ a {
 
 .chat-sidebar {
   background: var(--dark-color-b);
-  color: #fff;
+  /* color: #fff; */
+  color: rgba(22,125,200,1);
   padding: 20px 20px 60px;
   overflow-y: scroll;
 }
-
+/* #room-name p{
+  padding-right: 20px;
+} */
+/* .RoomName{
+  padding-right: 100px;
+} */
+/* i{
+  background-color: rgba(22,125,200,1);
+} */
 .chat-sidebar h2 {
   font-size: 20px;
   background: rgba(0, 0, 0, 0.1);
@@ -102,6 +117,8 @@ a {
 }
 
 .chat-messages {
+  /* gap: 5px; */
+  background-image: url("./chak-bg2.jpg");
   padding: 30px;
   max-height: 500px;
   overflow-y: scroll;
@@ -144,7 +161,9 @@ a {
 
 /* Join Page */
 .join-container {
-  max-width: 500px;
+  width: 600px;
+  /* height: 1000px; */
+  /* max-height: 1000px; */
   margin: 80px auto;
   color: #fff;
   border-radius: 10px;
@@ -164,8 +183,14 @@ a {
 .logo-img {
   margin-bottom: -8px;
   margin-right: 10px;
+  background-color: rgba(22,125,200,1);
+  border-radius: 8px;
+  
 }
 
+.join-header>h1{
+  color: rgba(22,125,200,1);
+}
 .join-main {
   padding: 30px 40px;
   background: var(--dark-color-b);
@@ -201,6 +226,18 @@ a {
 .join-main .btn {
   margin-top: 20px;
   width: 100%;
+  background-color: rgba(22,125,200,1);
+  border-radius: 5px;
+}
+
+label{
+  color: rgba(22,125,200,1);
+}
+
+.card{
+/* display: flex; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #5cb85c;
 }
 
 @media (max-width: 700px) {
