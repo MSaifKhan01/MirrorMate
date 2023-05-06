@@ -11,7 +11,7 @@ const room = urlParams.get("room");
 
 
 
-const socket = io("http://localhost:8081/",{transports:["websocket"]});
+const socket = io("http://localhost:8082/",{transports:["websocket"]});
 // const socket = io();
 
 socket.emit("joinRoom",({username,room}));
@@ -21,7 +21,9 @@ socket.emit("joinRoom",({username,room}));
 
 socket.on("roomname",(room)=>{
     let para=document.createElement("p")
+    para.className="RoomName"
     para.innerText=`Room Name :- ${room}`
+    
    //  console.log(room)
    roomName.append(para)
    })
@@ -136,6 +138,7 @@ socket.on("allusers",(users)=>{
 
 function  DispalyMessage(message){
     let div=document.createElement("div")
+    div.className="card"
     const name=document.createElement("h5")
     name.innerText=message.username
 // console.log(message.username,message.text,message.time)
