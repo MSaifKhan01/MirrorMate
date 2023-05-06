@@ -21,8 +21,7 @@ var getUserMedia =
   navigator.webkitGetUserMedia ||
   navigator.mozGetUserMedia;
 
-navigator.mediaDevices
-  .getUserMedia({
+navigator.mediaDevices.getUserMedia({
     video: true,
     audio: true,
   })
@@ -75,7 +74,7 @@ peer.on("call", function (call) {
   );
 });
 
-peer.on("open", (id) => { 
+peer.on("open", (id) => {
   socket.emit("join-room", ROOM_ID, id);
 });
 
