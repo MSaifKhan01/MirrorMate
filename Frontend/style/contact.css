@@ -1,0 +1,74 @@
+#inside-contact{
+    display:flex;
+    flex-direction:row;
+  }
+  #contact h1{
+    padding-top: 100px;
+    margin: auto;
+    font-size: 70px;
+    color:rgba(22,125,200,1);
+  }
+  #contact-left{
+    flex-basis:35%;
+    padding-left: 150px;
+    padding-top: 100px;
+    color: rgba(22,125,200,1);;
+  }
+  #contact-right{
+    flex-basis:60%;
+    padding-top:100px
+  }
+  #contact-left p{
+    margin-top:10px;
+    font-size: xx-large;
+  }
+  #contact-left img{
+    width:200px;
+    height:100px
+  }
+  
+  #contact-right form{
+    width:80%;
+    margin: auto;
+    color: rgba(22,125,200,1);;
+  }
+  
+  form input,form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    padding:10px;
+    margin:10px;
+    color:rgba(22,125,200,1);
+    font-size: 18px;
+    border-radius:6px ;
+  }
+  
+  form .btn{
+    padding:14px 60px;
+    font-size: 12px;
+    margin-top:15px;
+    cursor:pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+    border:none
+  }
+  #contact-part{
+    width:80%;
+    margin:auto;
+    margin-top:20px
+  }
+  #contact{
+    background-color:  rgb(12, 12, 14);
+    height:1000px;
+    text-align: center;
+  }
+  .btn{
+    padding: 15px 32px;
+    background-color: rgba(22,125,200,1);
+    /* text-decoration: none; */
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  
