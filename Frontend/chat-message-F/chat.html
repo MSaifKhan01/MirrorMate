@@ -12,6 +12,70 @@
 </head>
 
 <body>
+
+<!-- navbar -->
+<nav>
+  <i class="fa-solid fa-bars" id="hamburger"></i>
+  <div id="nav_right_side">
+    <div id="brand_name">
+      <a href="#" class="indexstyle1"
+        ><img
+          src="./Images/logo.jpg"
+          alt=""
+          height="100%"
+          width="100% "
+      /></a>
+    </div>
+  </div>
+  <div id="nav_left_side">
+    <div>
+      <i class="fa-solid fa-video"></i
+      ><span
+        ><a
+          href="#"
+          class="indexstyle"
+          >Video Call</a
+        >
+      </span>
+    </div>
+    <div>
+      <i class="fa-solid fa-video"></i
+      ><span
+        ><a
+          href="./room.html"
+          class="indexstyle"
+          >Screen Share</a
+        >
+      </span>
+    </div>
+    <div>
+      <i class="fa-solid fa-message"></i
+      ><span
+
+        ><a
+          href="#"
+          class="indexstyle"
+          >Message</a
+        >
+
+      </span>
+    </div>
+    <div>
+      <i class="fa-solid fa-user"></i
+      ><span><a id="name-user" href="#" class="indexstyle"></a> </span>
+    </div>
+  </div>
+</nav>
+<div id="burger">
+  <div class="burger_inside" id="vc">Video Call</div>
+  <div class="burger_inside" id="ss">Screen Share</div>
+  <div class="burger_inside" id="msg">Message</div>
+  <div class="burger_inside" id="hm">Home</div>
+</div>
+<!-- nav end -->
+
+
+
   <div class="chat-container">
     <header class="chat-header">
       <h1><img src="Images/chat-icon.png" width="40px" class="logo-img"> Mirror Mate</h1>
@@ -31,7 +95,7 @@
     <div class="chat-form-container">
       <form id="chat-form">
         <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
-        <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+        <button class="btn" id="msgbtn"><i class="fas fa-paper-plane"></i> Send</button>
       </form>
     </div>
   </div>

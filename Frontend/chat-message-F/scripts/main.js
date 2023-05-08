@@ -16,9 +16,6 @@ const socket = io("http://localhost:8082/",{transports:["websocket"]});
 
 socket.emit("joinRoom",({username,room}));
 
-
-
-
 socket.on("roomname",(room)=>{
     let para=document.createElement("p")
     para.className="RoomName"
@@ -28,70 +25,24 @@ socket.on("roomname",(room)=>{
    roomName.append(para)
    })
 
-
-
-
-
-
-
 socket.on("message",(message)=>{
     // outputMessage(message);
     DispalyMessage(message)
 
 })
 
-
-
 // Sending message
 
-// chatForm.addEventListener("submit",(e)=>{
-//     e.preventDefault()
-
-//     let msg  = e.target.elements.msg.value;
-
-//     msg  = msg.trim();
-
-//     if(!msg){
-//         return false;
-//     }
-
-//     socket.emit('chatMessage',msg);
-//     e.target.elements.msg.value = "";
-//     e.target.elements.msg.focus();
-
-// })
-
-
-
-
 let inputel=document.getElementById("msg")
-
-chatBtn.addEventListener("click",(e)=>{
+let msgbtn=document.getElementById("msgbtn")
+msgbtn.addEventListener("click",(e)=>{
     e.preventDefault()
     let msg=inputel.value
     socket.emit("chatmessage",msg)
     msg=""
 })
 
-// socket.on("roomUsers",({room,users})=>{
 
-//     roomName.innerText= room;
-
-// outputRoomUsers(users)
-
-// })
-
-
-// function outputRoomUsers(users){
-    
-//     userList.innerHTML = '';
-
-//     users.forEach(user => {
-//         const li = document.createElement("li");
-//         li.innerText = user.username;
-//         userList.appendChild(li)
-//     });
-// }
 
 socket.on("allusers",(users)=>{
     // userList.innerHTML=""
@@ -102,39 +53,7 @@ socket.on("allusers",(users)=>{
     });
 })
 
-
-
-
 //outPut message
-
-// function outputMessage(message){
-
-//     const div = document.createElement("div");
-//     div.classList.add("message");
-
-//     const p = document.createElement("p");
-
-//     p.classList.add("meta");
-
-//     p.innerText = message.username;
-
-//     p.innerHTML += `<span>${message.time}</span>`;
-
-//     div.appendChild(p);
-
-//     const para = document.createElement("p");
-
-//     para.classList.add("text");
-//     para.innerText = message.text;
-
-
-//     div.appendChild(para);
-//     chatMessages.appendChild(div);
-    
-
-// }
-
-
 
 function  DispalyMessage(message){
     let div=document.createElement("div")
@@ -151,3 +70,12 @@ function  DispalyMessage(message){
 
     chatMessages.append(div)
 }
+
+
+let leavbtn=document.getElementById("leave-btn")
+leavbtn.addEventListener("click",()=>{
+    let leavel=confirm("Are you Sure")
+    if(leavel){
+        window.location.href="./index.html"
+    }
+})
