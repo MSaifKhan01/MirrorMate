@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login</title>
 </head>
 <body>
-    <h2>this is login page</h2>
+    <form id="form"
+    ><input type="email" placeholder="Enter Your email" name="email">
+    <input type="password" placeholder="Enter Your password" name="password">
+    <input type="submit" placeholder="login">
+</form>
+    
 </body>
+<script>
+    let url = "http://localhost:7777"
+    let form = document.getElementById("form")
+
+    form.addEventListener("submit" , (e)=>{
+        e.preventDefault()
+        let obj = {
+            email: form.email.value,
+            password: form.password.value
+        }
+        fetch(`${url}/user/login`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(obj)
+        }).then((res)=>{
+            return res.json()
+        }).then ((res) =>{
+            console.log("yes",res)
+            if(res.error){
+                alert("wrong credentials")
+            }else{
+                window.location.href = "http://127.0.0.1:5500/signup%20login%20Frontend/index.html"
+            }
+            //
+        }).catch((error)=>{
+            console.log(error);
+        })
+
+    })
+
+</script>
 </html>
+
