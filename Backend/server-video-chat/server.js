@@ -24,9 +24,9 @@ app.get('/:room', (req, res) => {
 })
 
 
-
-const server = app.listen(process.env.port, () => {
-    console.log(`Video Call Server is running at PORT ${process.env.port}`)
+const PORT=process.env.port || 8080
+const server = app.listen(PORT, () => {
+    console.log(`Video Call Server is running at PORT ${PORT}`)
 })
 
 const io = require('socket.io')(server)
