@@ -184,12 +184,11 @@
     }
     
     @media screen and (max-width: 480px) {
-    #hamburger {
-    display: block;
+   .indexstyle {
+    text-decoration: none;
     color:  #00053d;
-    margin-right: 3%;
-    font-size: 160%;
-    padding-top: 2%;
+    font-size: 16px;
+    /* margin-left: 2%; */
     }
     #nav_left_side {
     display: none;
