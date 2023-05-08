@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="./style/contact.css">
 </head>
 <body>
+    <div id="nav">
+        <div class="logo">
+        <div class="logoimg">
+           <a href="index.html"><img src="./images/mirror mate.png" alt=""></a>
+         </div>
+    </div>
+    <div class="navele">
+       <h5><a class="navtxt" href="index.html"><b>ABOUT</b></a></h5>
+       <h5><a class="navtxt" href="./contact.html"><b>CONTACT US</b></a></h5>
+       <h5><a class="navtxt" href="video.html"><b>HELP</b></a></h5>
+       <h5><a class="navtxt" href="index.html"><b>BLOG</b></a></h5>
+       
+    </div>
+    <div class="bar">
+        <div id="butt">
+            <button class="login"><a href="login.html"> <b>LOG IN </b> </a> </button>
+            <button class="signup"><a href="signup.html"> <b> SIGN UP </b></a> </button>
+        </div>
+        </div>
+    </div>
+    <!-- nav bar -->
     <div id="contact" >
         <h1 class="sub-title">Contact US</h1>
         <div id="inside-contact">
@@ -25,10 +46,30 @@
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button class="btn" type="submit">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
            </div>
 </div>
     
 </body>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxKz0UA5U-_QyLI_F1-RdwwO-mv-_X-8z9cpDK5LSuN0N4CujeH-xwo_8L0gsz2kLcLtw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message Sent Successfully!"
+            setTimeout(function(){
+                msg.innerHTML=""
+
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </html>
 
