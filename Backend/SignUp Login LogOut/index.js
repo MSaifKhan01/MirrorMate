@@ -2,8 +2,10 @@ require("dotenv").config();
 const cors = require("cors");
 const { connection } = require("./config/db");
 const { userRouer } = require("./allRouters/userRouter");
-const { blogeRouter } = require("./allRouters/blogsRouter");
+
 const { validator } = require("./middleware/midleware");
+
+
 const cookieParser = require("cookie-parser");
 const winston = require("winston");
 const expressWinston = require("express-winston");
@@ -13,7 +15,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 
 // winston logging
 app.use(expressWinston.logger({
@@ -42,11 +46,10 @@ app.use(expressWinston.errorLogger({
     winston.format.prettyPrint()
   ),
 }));
-//soimple routes after this only
+
 
 app.use("/user", userRouer);
 
-app.use("/blog", validator, blogeRouter);
 
 app.get("/", (req, res) => {
   try{

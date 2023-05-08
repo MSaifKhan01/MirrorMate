@@ -1,13 +1,14 @@
 //-----------  All the Requirements/Imports Here  -----------------------------
 const express = require("express");
 const jwt = require("jsonwebtoken");
-const { validator, authorization } = require("../middleware/midleware");
+const { validator, authorization } = require("../middleware/midleware"); 
+
 require("dotenv").config();
 const sgMail = require("@sendgrid/mail");
 let globe_opt;
 const { v4: uuidv4 } = require("uuid");
 const fetch = (...args) =>
-  import("node-fetch").then(({ default: fetch }) => fetch(...args));
+import("node-fetch").then(({ default: fetch }) => fetch(...args));
 const { userModel } = require("../config/userSchema");
 const { tokenModel } = require("../config/blacklistSchema");
 const { passport } = require("../config/google.auth");
@@ -36,7 +37,8 @@ userRouer.get(
       req.user.password = bcrypt.hashSync(req.user.password, 2);
       const user = new userModel(req.user);
       await user.save();
-      token_Genretor(res, req.user.name, "login with google", "custemer");
+      token_Genretor(res, req.user.name, "login with google", "customer");
+      
     }
   }
 );
@@ -92,7 +94,7 @@ userRouer.get("/auth/github/callback", async (req, res) => {
     user_details.password = bcrypt.hashSync(user_details.password, 2);
     const user = new userModel(user_details);
     await user.save();
-    token_Genretor(res, user_details.name, "login with github", "custemer");
+    token_Genretor(res, user_details.name, "login with github", "customer");
   }
 });
 
@@ -100,7 +102,7 @@ userRouer.get("/auth/github/callback", async (req, res) => {
 userRouer.post("/signup", async (req, res) => {
   try {
     if (await userModel.findOne({ email: req.body.email })) {
-      res.status(406).json({ error: `uiser is alredy present.` });
+      res.status(406).json({ error: `user is alredy present.` });
     } else {
       req.body.password = bcrypt.hashSync(req.body.password, 2);
       const user = userModel(req.body);
@@ -111,7 +113,7 @@ userRouer.post("/signup", async (req, res) => {
     res.status(500).send({ err: err.message });
   }
 });
-userRouer.post("/log", async (req, res) => {
+userRouer.post("/login", async (req, res) => {
   try {
     let user = await userModel.findOne({ email: req.body.email });
     if (user.email) {
@@ -131,34 +133,34 @@ userRouer.post("/logout", async (req, res) => {
   try {
     token = req.headers.authorization.split(" ")[1];
     if (checkInredis (req.body.name,token) || await tokenModel.findOne({ token })) {
-      res.status(405).json({ error: `you are in alredy blacklist or logout` });
+      res.status(405).json({ error: `you are  alredy blacklisted or logout` });
     } else {
       const user = tokenModel({ token });
       await user.save();
       redis.set(req.body.name,token)
       redis.EXPIRE(req.body.name,2000)
       console.log("redis set",token );
-      res.status(202).json({ msg: `user logout sucsesfully` });
+      res.status(202).json({ msg: `user logout successfully` });
     }
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
 });
-userRouer.get("/forgot", async (req, res) => {
+userRouer.post("/email/forgot", async (req, res) => {
   try {
     if (await userModel.findOne({ email: req.body.email })) {
       globe_opt = Math.floor(Math.random() * 1000000);
       sgMail.setApiKey(process.env.SendGrid_Key);
       const msg = {
         to: req.body.email,
-        from: "thiteshivaji07@gmail.com",
-        subject: "Reset you Password for shubham App",
-        text: `Your OTP for Reseting Passwrd is ${globe_opt}`,
+        from: "mmehra851@gmail.com",
+        subject: "Reset you Password for Mirror Mate App",
+        text: `Your OTP is ${globe_opt}`,
       };
       await sgMail.send(msg);
-      res.status(202).json({ msg: `OTP sended on Email` });
+      res.status(202).json({ msg: `OTP sent on Email` });
     } else {
-      res.status(406).json({ error: `you are not a  user.` });
+      res.status(406).json({ error: `Email not registered.` });
     }
   } catch (err) {
     res.status(500).send({ err: err.message });
@@ -166,7 +168,7 @@ userRouer.get("/forgot", async (req, res) => {
 });
 userRouer.post("/forgot", async (req, res) => {
   try {
-    if (req.body.otp && req.body.otp == globe_opt) {
+    if (req.body.otp == globe_opt) {
       let user = await userModel.findOne({ email: req.body.email });
       req.body.password = bcrypt.hashSync(req.body.password, 2);
       await userModel.findByIdAndUpdate(
@@ -181,19 +183,9 @@ userRouer.post("/forgot", async (req, res) => {
     res.status(500).send({ err: err.message });
   }
 });
-userRouer.put("/roleUpdate", validator, authorization, async (req, res) => {
-  try {
-    let user = await userModel.findOne({ email: req.body.email });
-    await userModel.findByIdAndUpdate(
-      { _id: user._id },
-      { role: req.body.changerole }
-    );
-    res.status(202).send({ msg: `Role is updated succesfully.` });
-  } catch (err) {
-    res.status(500).send({ err: err.message })
-  }
-});
-//----------------- Addtional Functions Here -----------------------------------
+
+//----------------Functions Here -----------------------------------
+
 function token_Genretor(res, name, id, role) {
   let token = jwt.sign(
     { user: name, id: id, role: role },
@@ -206,7 +198,8 @@ function token_Genretor(res, name, id, role) {
     { expiresIn: "120s" }
   );
   res.cookie("token", token);
-  res.status(202).json({ refreshToken });
+  res.redirect("http://127.0.0.1:5500/signup%20Frontend/index.html")
+  // res.status(202).json({ refreshToken });
 }
 
 function checkInredis (key , token){
