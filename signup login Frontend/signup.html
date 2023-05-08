@@ -177,9 +177,10 @@ button:hover {
         <button onclick="onGithub()">Continue with github</button>
       </form>
 </body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 
-    let url = "http://localhost:7777"
+    let url = "https://nice-gold-cuttlefish-fez.cyclic.app"
     let btn = document.getElementById("btn")
     let form = document.getElementById("form")
     btn.addEventListener("click", (e) => {
@@ -200,9 +201,14 @@ button:hover {
         }).then ((res) =>{
             console.log("yes",res)
             if(res.error){
-                alert("user already registered")
+                // alert("user already registered")
+                Swal.fire(
+                '',
+                'Already Have an account PLEASE LOGIN',
+                'question'
+              )
             }else{
-                window.location.href = "http://127.0.0.1:5500/signup%20login%20Frontend/login.html"
+                window.location.href = "http://127.0.0.1:5501/signup%20login%20Frontend/login.html"
             }
             
         }).catch((error)=>{

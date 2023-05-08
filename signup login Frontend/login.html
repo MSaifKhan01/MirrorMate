@@ -161,7 +161,7 @@ button:hover {
       
         <button id="btn">Log In</button>
         <br>
-        <a href="http://127.0.0.1:5500/signup%20login%20Frontend/forgot.html"><p>Forgot Password?</p></a>
+        <a href="http://127.0.0.1:5501/signup%20login%20Frontend/forgot.html"><p>Forgot Password?</p></a>
         
       </form>
 
@@ -169,7 +169,7 @@ button:hover {
     
 </body>
 <script>
-    let url = "http://localhost:7777"
+    let url = "https://nice-gold-cuttlefish-fez.cyclic.app"
     let form = document.getElementById("form")
     let btn = document.getElementById("btn")
     btn.addEventListener("click" , (e)=>{
@@ -191,7 +191,7 @@ button:hover {
             if(res.error){
                 alert("wrong credentials")
             }else{
-                window.location.href = "http://127.0.0.1:5500/signup%20login%20Frontend/index.html"
+                window.location.href = "http://127.0.0.1:5501/Frontend/dashboard.html"
                 console.log(res);
             }
             //
