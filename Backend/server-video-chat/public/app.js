@@ -1,5 +1,6 @@
 const socket = io("/", {
-  withCredentials: true
+  withCredentials: false,
+  // transports:["websocket"]
 });
 const chatInputBox = document.getElementById("chat_message");
 const all_messages = document.getElementById("all_messages");
@@ -22,9 +23,9 @@ var getUserMedia =
   navigator.mozGetUserMedia;
 
 navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: true,
-  })
+  video: true,
+  audio: true,
+})
   .then((stream) => {
     myVideoStream = stream;
     addVideoStream(myVideo, stream);
@@ -150,3 +151,36 @@ const setMuteButton = () => {
     <span>Mute</span>`;
   document.getElementById("muteButton").innerHTML = html;
 };
+
+
+function ShowChat(){
+  const right=document.querySelector(".main__right")
+  if (right.style.display === "none") {
+    right.style.display = "flex";
+  } else {
+    right.style.display = "none";
+  }
+  
+}
+
+
+const showInvitePopup = () => {
+  const dis=window.location.href
+
+  Swal.fire({
+    title:"Share this link",
+    html:
+    ` <div id="dis">${dis}</div><br> 
+    <button class="btn btn-info" onClick="${(function(){
+      navigator.clipboard.writeText(dis)
+    })()}">Copy</button>`,
+    showCloseButton: true,
+    showCancelButton: true,
+    // focusConfirm: false,
+    confirmButtonText:
+      '<i class="fa fa-thumbs-up"></i> Great!',
+    confirmButtonAriaLabel: 'Thumbs up, great!',
+  })
+
+}
+

@@ -30,7 +30,7 @@ video {
   display: flex;
 }
 .main__left {
-  flex: 0.8;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -40,6 +40,7 @@ video {
   flex-direction: column;
   background-color: #242324;
   border-left: 1px solid #3d3d42;
+  
 }
 .main__videos {
   flex-grow: 1;
@@ -117,3 +118,4 @@ video {
 .unmute {
   color: red;
 }
+
