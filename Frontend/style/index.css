@@ -4,6 +4,8 @@
     /* border: 3px solid black; */
     display: flex;
     background-color: rgb(12, 12, 14);
+    position: -webkit-sticky;
+    position: sticky;
     
 }
 
@@ -541,179 +543,34 @@ font-size: medium;
 }
 
 /* footer css completes here  */
-
-@media only screen and (max-width: 600px) {
-  #nav{
-    width:100%;
-    height: 600px;
-    /* border: 3px solid black; */
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(12, 12, 14);
-    
-}
-
-#nav a{
-    color: rgb(242, 246, 242);
-    background-color: transparent;
+.uparrow{width: 66px;
+    height: 66px;
+    text-align: center;
     text-decoration: none;
-    font-size: small;
+    position: fixed;
+    bottom: 55px;
+    right: 20px;
+    background: url(//images.shopclues.com/images/ui//scrolltop_teal.png) no-repeat 0 -74px;
+    z-index: 999;
+    text-indent: -999px;
+    overflow: hidden;
+    display: block;
 }
-.logo{
-  width: 10%;
-  height: 90px;
-  /* border: 2px solid black; */
-  margin-left: 50px;
-  cursor: pointer;
-}
-.logo >.logoimg img{
-    width: 95%;
-    height: 70px;
-}
-.navele{
-   
-    width: 30%;
-    height: 250px;
-    padding-left: 100px;
-    padding-right:0px;
-    align-items:flex-start;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    text-decoration: none;
-    z-index: 2;
-
-}
-.navele{
-   transition: transform .2s;
-   margin: auto;
-}
-.navele:hover {
--ms-transform: scale(1.5); /* IE 9 */
--webkit-transform: scale(1.5); /* Safari 3-8 */
-transform: scale(1.3); 
-}
-.navtxt{
-    text-decoration: none;
-    font-size: 10px;
-    margin: auto;
-
-   }
-  .navtxt:hover{
-    color:royalblue
-  } 
-
-
-.bar{
-    width: 270px;
-    height: 260px;
-    /* border: 2px solid blue; */
-    margin-right: 0px;
-  margin-top: 0px;
-    display: flex;
-    flex-direction: column;
-    font-size: small;
-}
-#butt{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  
-}
-
-
-
-  .login{
-    padding: 15px 32px;
-    background-color: rgba(22,125,200,1);
-    /* text-decoration: none; */
-    color: white;
-    border-radius: 10px;
-    margin-top: 10px;
-    text-decoration: none;
-    margin-left:300px
-    
+@media screen and (min-width: 501px) and (max-width: 1000px){
+  .logo{
+    display: block;
   }
-  .login:hover{
-    transform: scale(0.8);
-    }
-
-.signup{
-    padding: 15px 32px;
-    /* width:120px; */
-    background-color:rgba(22,125,200,1);
-    /* text-decoration: none; */
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    margin-top: 20px;
-    margin-left:300px;
-   
-   }
-   .signup a{
-    font-size: 20px;
-   }
-   .signup:hover{
-    transform: scale(0.8);
-    }
-    /* nav complete here */
-    #inside-contact{
-      width:600px;
-      display:flex;
-      flex-direction:column;
-    }
-    #contact{
-      width:600px
-    }
-    #contact h1{
-      padding-top: 100px;
-      margin: auto;
-      font-size: 30px;
-      color:rgba(22,125,200,1);
-    }
-    #contact-left{
-      width: 600px;
-      flex-basis:35%;
-      padding-left: 0px;
-      padding-top: 0px;
-      color: rgba(22,125,200,1);;
-    }
-    #contact-right{
-      flex-basis:60%;
-      padding-top:100px;
-
-    }
-    form input,form textarea{
-      width:200px;
-      border:0;
-      outline:none;
-      padding:10px;
-      margin:10px;
-      color:rgba(22,125,200,1);
-      font-size: 18px;
-      border-radius:6px ;
-    }
-     
-#contact-right form{
-width:50%;
-margin: auto;
-color: rgba(22,125,200,1);;
-}
-.logo{
-width: 20%;
-height: 90px;
-/* border: 2px solid black; */
-/* margin-right: 20px; */
-cursor: pointer;
-margin: auto;
-}
-.logo >.logoimg img{
-  width:100px;
-  height: 70px;
-  margin-right: 150px;
-  
-}
+  .logo>.logoimg img{
+    height:90px
+  }
+  .navele{
+    display:none
+  }
+  #butt{
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row;
+  }
 /* nav compltete here */
 
 #image{
@@ -1080,24 +937,33 @@ display: none;
   .foot1{
     display: none;
   }
+  .lastcard1{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-between;
+  }
   .lastcard1 :nth-child(2){
-    width: 240px;
-    padding-left: 5px;
+    width: 218px;
+    padding-left: 200px;
     cursor: pointer;
+    padding-top: 20px;
     
     
     }
     .lastcard1 :nth-child(1){
     width: 218px;
-    padding-left:60px;
+    padding-left:200px;
     cursor: pointer;
     
     
     }
     .lastcard1 p{
-    text-align: center;
-    padding-right: 45px;
-    color: white;
+    margin-right: 120px;
+  
+    }
+    #par{
+      display: none;
     }
     
 
