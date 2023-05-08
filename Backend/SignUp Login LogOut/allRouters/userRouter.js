@@ -119,6 +119,7 @@ userRouer.post("/login", async (req, res) => {
     if (user.email) {
       if (await bcrypt.compare(req.body.password, user.password)) {
         token_Genretor(res, user.name, user._id, user.role);
+        res.send({msg: "ok"})
       } else {
         res.status(406).json({ msg: `user password is worng..` });
       }
