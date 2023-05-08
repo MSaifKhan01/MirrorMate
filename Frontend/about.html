@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./style/about.css">
+</head>
+<body>
+    <div id="nav">
+        <div class="logo">
+        <div class="logoimg">
+           
+           <a href="index.html"><img src="./images/mirror mate.png" alt=""></a>
+         </div>
+    </div>
+    <div class="navele">
+       <h5><a class="navtxt" href="./about.html"><b>ABOUT</b></a></h5>
+       <h5><a class="navtxt" href="./contact.html"><b>CONTACT US</b></a></h5>
+       <h5><a class="navtxt" href="./help.html"><b>HELP</b></a></h5>
+       
+       
+    </div>
+    <div class="bar">
+        <div id="butt">
+            <button class="login"><a href="../signup login Frontend/login.html"> <b>LOG IN </b> </a> </button>
+            <button class="signup"><a href="../signup login Frontend/signup.html"> <b> SIGN UP </b></a> </button>
+        </div>
+        </div>
+    </div>
+   
+    <!-- nav complete here -->
+    <div id="slideshow">
+    </div>
+    <!-- slideshow end here -->
+    <div id="misson">
+        <div class="left_div"><h1>OUR MISSION</h1>
+        Our screen sharing app is designed to help people collaborate more effectively,no matter where they are in the world. By allowing users to share their screen with others, we make it easy to work together on projects, troubleshoot problems, and present information.
+            Our mission is to simplify the process of sharing your  screen with others. Whether you're giving a presentation, demonstrating a product,or working on a project with others, our app makes it easy to share your screen in real time. 
+            At our core, we believe that collaboration is the key to success. That's why we created our screen sharing app, which allows users to work together more seamlessly and efficiently. By sharing your screen, you can ensure that everyone is on the same page and working towards a common goal.
+        </div>
+        <div>
+            <img src="https://imgv3.fotor.com/images/blog-cover-image/How-to-change-background-on-Zoom.jpg">
+        </div>
+    </div>
+    <!-- mission part  -->
+    <div class="theend">
+        <div class="theendcard">
+            <div class="lastcard">
+           
+            </div>
+            <div class="lastcard1">
+    
+             <img src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/app-images/image.coreimg.100.300.png/1661990967164/app-store.png" alt="">
+             <img src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/app-images/image_205323551.coreimg.100.300.png/1661990917826/google.png" alt="">
+             <p><b>Privacy | Terms</b> </p>
+             <p id="par"><b>© Copyright 2023. All rights reserved.</b></p>
+            </div>
+            <p class="foot1">If you are using a screen reader and are having problems using this website, please call <br> 1-844-462-8299 for assistance.</p>
+        </div>
+    </div>
+    </div>
+
+    
+</body>
+<script>
+    var Images = [
+    
+    "https://c1.wallpaperflare.com/preview/71/961/288/5ad69dfc0373a.jpg",
+    "https://d33wubrfki0l68.cloudfront.net/c8b8fc51e6cb9733a94950dabb974173bdc70ee2/bbf07/assets/img/covers/hellobackgrounds-example-01.webp"
+   
+  ]
+  let kavita=document.getElementById("slideshow")
+  
+  let i = 0;
+  
+  setInterval(function () {
+      Images.forEach((element,index)=>{
+          if(i===index){
+      let myImg=document.createElement("img")
+      myImg.setAttribute("src",element)
+      kavita.innerHTML=null
+  kavita.append(myImg)
+          }
+  });
+      
+     i++
+     
+   if(i>=Images.length){
+      i=0
+     }
+  }, 3000);
+</script>
+</html>
