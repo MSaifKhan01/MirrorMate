@@ -12,7 +12,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "8080",
+  port: "mirrormate-server-videocall.onrender.com",
 });
 
 let myVideoStream;
