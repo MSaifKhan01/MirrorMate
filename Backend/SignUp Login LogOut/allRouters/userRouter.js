@@ -199,7 +199,7 @@ function token_Genretor(res, name, id, role) {
     { expiresIn: "120s" }
   );
   res.cookie("token", token);
-  res.redirect("http://127.0.0.1:5500/signup%20login%20Frontend/index.html")
+  res.redirect("http://127.0.0.1:5501/Frontend/dashboard.html")
   // res.status(202).json({ refreshToken });
 }
 

@@ -1932,3 +1932,404 @@
   level: '\x1B[32minfo\x1B[39m',
   message: 'HTTP POST /user/login'
 }
+{
+  meta: {
+    req: {
+      url: '/user/auth/google',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8',
+        cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTWFuaXNoIE1laHJhIiwiaWQiOiI2NDU4ZmIwNDY5ZWM0NTA5ZGI1NGY3M2QiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4MzU1MzIwNSwiZXhwIjoxNjgzNTUzMjExfQ.oKHh5cFGcLcqihDRfQRZpAofo0bujfFnNTWwkudgtDU'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/user/auth/google',
+      query: {}
+    },
+    res: { statusCode: 302 },
+    responseTime: 20
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP GET /user/auth/google'
+}
+{
+  meta: {
+    req: {
+      url: '/user/auth/google/callback?code=4%2F0AbUR2VPhZ8ZqtIGle5a3z2juspdnc8VxOJIjdZvo7iX407ZAp_cykLdGkWDpQe0w29ulAQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8',
+        cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTWFuaXNoIE1laHJhIiwiaWQiOiI2NDU4ZmIwNDY5ZWM0NTA5ZGI1NGY3M2QiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4MzU1MzIwNSwiZXhwIjoxNjgzNTUzMjExfQ.oKHh5cFGcLcqihDRfQRZpAofo0bujfFnNTWwkudgtDU'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/user/auth/google/callback?code=4%2F0AbUR2VPhZ8ZqtIGle5a3z2juspdnc8VxOJIjdZvo7iX407ZAp_cykLdGkWDpQe0w29ulAQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none',
+      query: {
+        code: '4/0AbUR2VPhZ8ZqtIGle5a3z2juspdnc8VxOJIjdZvo7iX407ZAp_cykLdGkWDpQe0w29ulAQ',
+        scope: 'email profile https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email',
+        authuser: '0',
+        prompt: 'none'
+      }
+    },
+    res: { statusCode: 302 },
+    responseTime: 785
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP GET /user/auth/google/callback?code=4%2F0AbUR2VPhZ8ZqtIGle5a3z2juspdnc8VxOJIjdZvo7iX407ZAp_cykLdGkWDpQe0w29ulAQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none'
+}
+{
+  meta: {
+    req: {
+      url: '/user/auth/github',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8',
+        cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTWFuaXNoIE1laHJhIiwiaWQiOiI2NDU4ZmIwNDY5ZWM0NTA5ZGI1NGY3M2QiLCJyb2xlIjoidXNlciIsImlhdCI6MTY4MzU1ODEzMCwiZXhwIjoxNjgzNTU4MTM2fQ.rYuzq3m5TAlSj3Kt1ILMLL1LudHezChpG7TNll0o0mk'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/user/auth/github',
+      query: {}
+    },
+    res: { statusCode: 302 },
+    responseTime: 2
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP GET /user/auth/github'
+}
+{
+  meta: {
+    req: {
+      url: '/user/signup',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'content-length': '64',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://127.0.0.1:5501',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/signup',
+      query: {}
+    },
+    res: { statusCode: 202 },
+    responseTime: 144
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP POST /user/signup'
+}
+{
+  meta: {
+    req: {
+      url: '/user/signup',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'content-length': '64',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://127.0.0.1:5501',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/signup',
+      query: {}
+    },
+    res: { statusCode: 202 },
+    responseTime: 163
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP POST /user/signup'
+}
+{
+  meta: {
+    req: {
+      url: '/user/login',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'content-length': '47',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://127.0.0.1:5501',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/login',
+      query: {}
+    },
+    res: { statusCode: 406 },
+    responseTime: 73
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP POST /user/login'
+}
+{
+  meta: {
+    req: {
+      url: '/user/login',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'content-length': '48',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://127.0.0.1:5501',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/login',
+      query: {}
+    },
+    res: { statusCode: 200 },
+    responseTime: 43
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP POST /user/login'
+}
+{
+  meta: {
+    req: {
+      url: '/user/email/forgot',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'content-length': '31',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://127.0.0.1:5501',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/email/forgot',
+      query: {}
+    },
+    res: { statusCode: 202 },
+    responseTime: 1713
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP POST /user/email/forgot'
+}
+{
+  meta: {
+    req: {
+      url: '/user/forgot',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'content-length': '63',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://127.0.0.1:5501',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/forgot',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 3
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP POST /user/forgot'
+}
+{
+  meta: {
+    req: {
+      url: '/user/forgot',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'content-length': '64',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://127.0.0.1:5501',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/forgot',
+      query: {}
+    },
+    res: { statusCode: 202 },
+    responseTime: 121
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP POST /user/forgot'
+}
+{
+  meta: {
+    req: {
+      url: '/user/login',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'content-length': '48',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://127.0.0.1:5501',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/login',
+      query: {}
+    },
+    res: { statusCode: 406 },
+    responseTime: 42
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP POST /user/login'
+}
+{
+  meta: {
+    req: {
+      url: '/user/login',
+      headers: {
+        host: 'localhost:7777',
+        connection: 'keep-alive',
+        'content-length': '49',
+        'sec-ch-ua': '"Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-ch-ua-mobile': '?0',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+        'content-type': 'application/json',
+        accept: '*/*',
+        origin: 'http://127.0.0.1:5501',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-dest': 'empty',
+        referer: 'http://127.0.0.1:5501/',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-IN,en-US;q=0.9,en;q=0.8'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/login',
+      query: {}
+    },
+    res: { statusCode: 200 },
+    responseTime: 45
+  },
+  level: '\x1B[32minfo\x1B[39m',
+  message: 'HTTP POST /user/login'
+}
