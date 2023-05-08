@@ -198,7 +198,7 @@ leave_meetingBtn.addEventListener('click', (e) => {
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
     confirmButtonText: 'Yes, leave!'
-  }).then(async(result) => {
+  }).then((result) => {
     if (result.isConfirmed) {
       // Swal.fire(
       //   'Deleted!',
@@ -206,8 +206,9 @@ leave_meetingBtn.addEventListener('click', (e) => {
       //   'success'
       // )
 
-      // window.location.href='/door.ejs'
-      await fetch('/')
+
+      window.location.href='http://127.0.0.1:5501/Frontend/dashboard.html'
+
     }
   })
 })
