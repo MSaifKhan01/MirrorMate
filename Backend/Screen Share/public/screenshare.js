@@ -1,4 +1,4 @@
-const socket=io('http://localhost:3000/',{transports:["websocket"]})  
+const socket=io('https://juvenile-tidy-seal.glitch.me',{transports:["websocket"]})  
 const myvideo = document.querySelector("#vd1");
 const roomid = params.get("room");
 let username;
@@ -242,7 +242,7 @@ function getRoomCode() {
 }
 
 function shareCodeOnWp(){
-    window.open('https://web.whatsapp.com/send?text=Remote Talk %0a-------------- %0aJoin a meeting by clicking the link below: %0ahttps://remotetalk.herokuapp.com//room.html?room=' + getRoomCode())
+    window.open('https://web.whatsapp.com/send?text=Remote Talk %0a-------------- %0aJoin a meeting by clicking the link below: %0ahttps://Mirrorapp//room.html?room=' + getRoomCode())
 }
 
 function CopyClassText() {
