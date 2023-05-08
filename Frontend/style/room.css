@@ -39,6 +39,8 @@ img {
 
 body {
   background-color: #ffffff;
+  background-image:url("https://images3.alphacoders.com/876/thumb-1920-876762.jpg");
+  background-size:100%;
 }
 
 nav .logo {
@@ -1051,6 +1053,7 @@ nav .logo {
 }
 
   .room_container{
+    background-image: linear-gradient(rgb(248, 244, 247), rgb(240, 242, 247)); 
     width: 30%;
     height: 50%;
     margin: auto;
