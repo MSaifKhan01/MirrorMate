@@ -121,7 +121,7 @@ userRouer.post("/login", async (req, res) => {
         // token_Genretor(res, user.name, user._id, user.role);
         res.send({msg: "ok"})
       } else {
-        res.status(406).json({ msg: `user password is worng..` });
+        res.status(406).json({ error: `user password is worng..` });
       }
     } else {
       res.status(406).json({ msg: `user email is worng..` });
@@ -199,7 +199,7 @@ function token_Genretor(res, name, id, role) {
     { expiresIn: "120s" }
   );
   res.cookie("token", token);
-  res.redirect("http://127.0.0.1:5500/signup%20Frontend/index.html")
+  res.redirect("http://127.0.0.1:5500/signup%20login%20Frontend/index.html")
   // res.status(202).json({ refreshToken });
 }
 

@@ -4,8 +4,6 @@ const { connection } = require("./config/db");
 const { userRouer } = require("./allRouters/userRouter");
 
 const { validator } = require("./middleware/midleware");
-
-
 const cookieParser = require("cookie-parser");
 const winston = require("winston");
 const expressWinston = require("express-winston");
