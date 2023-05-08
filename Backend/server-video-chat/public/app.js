@@ -45,7 +45,10 @@ navigator.mediaDevices.getUserMedia({
 
     document.addEventListener("keydown", (e) => {
       if (e.which === 13 && chatInputBox.value != "") {
-        socket.emit("message", chatInputBox.value);
+        socket.emit("message", {
+          mesage: chatInputBox.value,
+          userName: userName
+        });
         chatInputBox.value = "";
       }
     });
@@ -79,7 +82,6 @@ peer.on("open", (id) => {
   socket.emit("join-room", ROOM_ID, id);
 });
 
-// CHAT
 
 const connectToNewUser = (userId, streams) => {
   var call = peer.call(userId, streams);
@@ -153,27 +155,27 @@ const setMuteButton = () => {
 };
 
 
-function ShowChat(){
-  const right=document.querySelector(".main__right")
+function ShowChat() {
+  const right = document.querySelector(".main__right")
   if (right.style.display === "none") {
     right.style.display = "flex";
   } else {
     right.style.display = "none";
   }
-  
+
 }
 
 
 const showInvitePopup = () => {
-  const dis=window.location.href
+  const dis = window.location.href
 
   Swal.fire({
-    title:"Share this link",
+    title: "Share this link",
     html:
-    ` <div id="dis">${dis}</div><br> 
-    <button class="btn btn-info" onClick="${(function(){
-      navigator.clipboard.writeText(dis)
-    })()}">Copy</button>`,
+      ` <div id="dis">${dis}</div><br> 
+    <button class="btn btn-info" onClick="${(function () {
+        navigator.clipboard.writeText(dis)
+      })()}">Copy</button>`,
     showCloseButton: true,
     showCancelButton: true,
     // focusConfirm: false,
@@ -184,3 +186,28 @@ const showInvitePopup = () => {
 
 }
 
+const leave_meetingBtn = document.getElementById("leave-meeting");
+leave_meetingBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  Swal.fire({
+    title: 'Are you sure?',
+    // text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, leave!'
+  }).then(async(result) => {
+    if (result.isConfirmed) {
+      // Swal.fire(
+      //   'Deleted!',
+      //   'Your file has been deleted.',
+      //   'success'
+      // )
+
+      // window.location.href='/door.ejs'
+      await fetch('/')
+    }
+  })
+})
