@@ -45,7 +45,7 @@ io.on("connection",(socket)=>{
 
      socket.on("chatmessage",(msg)=>{
        
-
+console.log(msg)
 
         const user = getCurrentUser(socket.id);
 

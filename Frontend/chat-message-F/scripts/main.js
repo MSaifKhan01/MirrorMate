@@ -11,7 +11,7 @@ const room = urlParams.get("room");
 
 
 
-const socket = io("http://localhost:8082/",{transports:["websocket"]});
+const socket = io("https://mirrormate.onrender.com/",{transports:["websocket"]});
 // const socket = io();
 
 socket.emit("joinRoom",({username,room}));
@@ -33,11 +33,12 @@ socket.on("message",(message)=>{
 
 // Sending message
 
-let inputel=document.getElementById("msg")
+let inputel=document.getElementById("msg2")
 let msgbtn=document.getElementById("msgbtn")
-msgbtn.addEventListener("click",(e)=>{
+chatBtn.addEventListener("submit",(e)=>{
     e.preventDefault()
     let msg=inputel.value
+    console.log(msg)
     socket.emit("chatmessage",msg)
     msg=""
 })
@@ -79,3 +80,6 @@ leavbtn.addEventListener("click",()=>{
         window.location.href="./index.html"
     }
 })
+
+
+// https://mirrormate.onrender.com
