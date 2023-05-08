@@ -77,7 +77,7 @@ let leavbtn=document.getElementById("leave-btn")
 leavbtn.addEventListener("click",()=>{
     let leavel=confirm("Are you Sure")
     if(leavel){
-        window.location.href="./index.html"
+        window.location.href="http://127.0.0.1:5501/Frontend/dashboard.html#"
     }
 })
 
