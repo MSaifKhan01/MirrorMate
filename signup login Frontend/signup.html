@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" placeholder="Enter Your name" name="name">
+        <input type="email" placeholder="Enter Your email" name="email">
+        <input type="password" placeholder="Enter Your password" name="password">
+        <input type="submit" placeholder="SignUp">
+    </form>
+
+    <button onclick="onGoogle()">google</button>
+    <button onclick="onGithub()"> github</button>
+</body>
+<script>
+
+    let url = "http://localhost:7777"
+    let form = document.getElementById("form")
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let obj = {
+            name: form.name.value,
+            email: form.email.value,
+            password: form.password.value
+        }
+        fetch(`${url}/user/signup`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(obj)
+        }).then((res)=>{
+            return res.json()
+        }).then ((res) =>{
+            console.log("yes",res)
+            if(res.error){
+                alert("chala ja bsdk")
+            }else{
+                window.location.href = "http://127.0.0.1:5500/signup%20Frontend/login.html"
+            }
+            //
+        }).catch((error)=>{
+            console.log(error);
+        })
+
+    })
+
+
+    function onGoogle() {
+       window.location.href = `${url}/user/auth/google`
+    }
+
+    function onGithub() {
+        window.location.href = `${url}/user/auth/github`
+    }
+
+</script>
+
+</html>

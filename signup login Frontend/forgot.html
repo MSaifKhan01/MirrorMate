@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mirror meet forgot password</h1>
+    <input type="email" id="email"placeholder="enter your email">
+    <button id="send">sent opt</button>
+    <input type="text" placeholder="enter your opt here" id="otp">
+    <input type="password" placeholder="enter new password" id="newPass">
+    <button id="change">Change password</button>
+</body>
+<script>
+    let url = "http://localhost:7777"
+    document.getElementById("send").addEventListener("click",()=>{
+        let obj ={
+            email:document.getElementById("email").value
+        }
+        fetch(`${url}/user/email/forgot`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(obj)
+        }).then((res)=>{
+            return res.json()
+        }).then ((res) =>{
+            console.log("yes",res)
+            alert("opt sent on your email")
+        }).catch((error)=>{
+            console.log(error);
+        })
+    })
+    document.getElementById("change").addEventListener("click",()=>{
+        let obj ={
+            email:document.getElementById("email").value,
+            password:document.getElementById("newPass").value,
+            otp:document.getElementById("otp").value,
+        }
+        fetch(`${url}/user/forgot`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(obj)
+        }).then((res)=>{
+            return res.json()
+        }).then ((res) =>{
+            console.log("yes",res)
+            if(res.error){
+                alert("Wrong Opt")
+            }else{
+                alert("Password Changed Successfully")
+            }
+            
+        }).catch((error)=>{
+            console.log(error);
+        })
+    })
+</script>
+</html>
