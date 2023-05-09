@@ -1,3 +1,3 @@
 # peaceful-plastic-9412
 
-https://subtle-cupcake-7dd5f3.netlify.app
+https://stalwart-cassata-e82d91.netlify.app
