@@ -136,14 +136,60 @@ button:hover {
  background: #3071d2;
 }
 
+@media only screen and (max-width: 768px) {
+  /* Styles for iPad */
+  .signup {
+    max-width: 400px;
+    padding: 40px 50px;
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .signup__label {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Styles for mobile */
+  .signup {
+    max-width: 300px;
+    padding: 30px 40px;
+    height: 300px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  .signup__label {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
 
    </style>
 </head>
 <body>
-    <!-- <form id="form"
-    ><input type="email" placeholder="Enter Your email" name="email">
-    <input type="password" placeholder="Enter Your password" name="password">
-    <input type="submit" placeholder="login"> -->
+    
 
     <form class="signup" onsubmit="return false" autocomplete="off" id="form">
         <h1 style="margin-bottom: 10px; padding-left: 25%;">Log In Here</h1>
