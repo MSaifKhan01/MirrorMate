@@ -136,21 +136,47 @@ button {
 button:hover {
   background: #3071d2;
 }
+@media (max-width: 768px) {
+  /* styles for devices with a max width of 768px (e.g. iPad) */
+  .signup {
+    max-width: 90%;
+    padding: 30px;
+    height: auto;
+  }
+  
+  /* adjust font size for smaller screens */
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* adjust input field height and label font size */
+  .signup__input {
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .signup__label {
+    font-size: 1rem;
+  }
+  
+  /* adjust button padding and font size */
+  button {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
 
 
     </style>
 </head>
 
 <body>
-    <!-- <form id="form">
-        <input type="text" placeholder="Enter Your name" name="name">
-        <input type="email" placeholder="Enter Your email" name="email">
-        <input type="password" placeholder="Enter Your password" name="password">
-        <input type="submit" placeholder="SignUp">
-    </form>
-
-    <button onclick="onGoogle()">google</button>
-    <button onclick="onGithub()"> github</button> -->
+    
     <form class="signup" onsubmit="return false" autocomplete="off" id="form">
         <h2>Create account</h2>
         <h3>Already have an account? <span style="color: red;">Log in</span></h3>
