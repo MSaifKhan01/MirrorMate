@@ -2,6 +2,18 @@
 
 Our Diployed Link : https://stalwart-cassata-e82d91.netlify.app
 
+Our screen share app is a versatile communication platform that combines the power of Socket.IO, WebRTC, Express, Node.js, HTTP, HTML, CSS, and JavaScript. With this app, users can seamlessly connect, chat, make video calls, and share their screens in real-time.
+
+The app features a secure login and sign-up system with token authentication, ensuring that user data and conversations remain private. Once logged in, users can initiate video calls with friends, colleagues, or clients, enabling face-to-face communication from anywhere in the world.
+
+In addition to video calls, the app allows users to share their screens, making it perfect for collaborative work, remote meetings, presentations, or troubleshooting sessions. Whether you're discussing a project, teaching a class, or seeking technical support, the screen sharing feature provides a seamless and immersive experience.
+
+The intuitive and user-friendly interface, designed with HTML and CSS, ensures that navigating through the app is effortless. JavaScript enhances the interactivity, allowing for real-time updates and smooth performance.
+
+With our screen share app, communication barriers are broken, enabling users to collaborate, connect, and learn more effectively. Experience the power of seamless video calls, real-time chat, and screen sharing in one comprehensive platform.
+
+<br>
+
 ## Landing Paage
 ![image](https://github.com/MSaifKhan01/peaceful-plastic-9412/assets/119391188/d701f75d-a0c2-4db9-91cf-c3e75ae97f44)
 <br>
