@@ -77,7 +77,7 @@ With our screen share app, communication barriers are broken, enabling users to 
 <br>
 
 ## Video Call
-![image](https://github.com/MSaifKhan01/peaceful-plastic-9412/assets/119391188/90b5fe14-e6bb-4f0f-a2ce-896fc57484fb)
+![WhatsApp Image 2023-05-10 at 19 33 48](https://github.com/MSaifKhan01/peaceful-plastic-9412/assets/119391188/c16abac0-5069-4753-b87d-f6b2d4e0e7c1)
 
 ## Message
 ![image](https://github.com/MSaifKhan01/peaceful-plastic-9412/assets/119391188/f1bbd23d-283d-482f-a79e-3a6f12060ec4)
