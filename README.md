@@ -48,6 +48,7 @@ With our screen share app, communication barriers are broken, enabling users to 
         The authentication token is invalidated, ensuring secure access.
 ## Some sample Images 
 <br>
+
 ## Landing Paage
 ![image](https://github.com/MSaifKhan01/peaceful-plastic-9412/assets/119391188/d701f75d-a0c2-4db9-91cf-c3e75ae97f44)
 <br>
