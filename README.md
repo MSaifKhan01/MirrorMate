@@ -12,7 +12,40 @@ The intuitive and user-friendly interface, designed with HTML and CSS, ensures t
 
 With our screen share app, communication barriers are broken, enabling users to collaborate, connect, and learn more effectively. Experience the power of seamless video calls, real-time chat, and screen sharing in one comprehensive platform.
 
-<br>
+   ## WorkFlow
+    User Registration and Login:
+        Users can register for an account by providing their credentials (name, email, password).
+        Upon successful registration, users receive a verification email.
+        Users can log in using their registered email and password.
+        The app validates the user's credentials and generates an authentication token.
+
+    Dashboard:
+        After logging in, users are directed to the dashboard.
+        The dashboard provides an overview of contacts, chat history, and upcoming video calls.
+        Users can search for contacts and initiate conversations.
+
+    Chat:
+        Users can select a contact from the dashboard to start a chat.
+        The app establishes a real-time Socket.IO connection between the users.
+        Users can exchange text messages, emojis, and media files.
+        New messages trigger real-time updates and notifications.
+
+    Video Call:
+        Users can initiate a video call by selecting a contact or joining a scheduled call.
+        The app establishes a WebRTC connection between the users.
+        Users can see and hear each other in real-time.
+        The app provides options for muting audio, disabling video, and ending the call.
+        Screen sharing can be enabled during the video call.
+
+    Screen Sharing:
+        During a video call, users can activate the screen sharing feature.
+        The app captures the user's screen and streams it to the other participants.
+        Participants can view the shared screen in real-time.
+        Screen sharing can be stopped by the user at any time.
+
+    Logout:
+        Users can log out of the app to end their session.
+        The authentication token is invalidated, ensuring secure access.
 
 ## Landing Paage
 ![image](https://github.com/MSaifKhan01/peaceful-plastic-9412/assets/119391188/d701f75d-a0c2-4db9-91cf-c3e75ae97f44)
