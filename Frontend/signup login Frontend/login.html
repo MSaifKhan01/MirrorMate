@@ -234,7 +234,7 @@ button:hover {
             return res.json()
         }).then ((res) =>{
             console.log("yes",res)
-            if(res.error){
+            if(res.err){
                 alert("wrong credentials")
             }else{
                 window.location.href = "../dashboard.html"

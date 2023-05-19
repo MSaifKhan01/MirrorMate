@@ -102,7 +102,7 @@ userRouer.get("/auth/github/callback", async (req, res) => {
 userRouer.post("/signup", async (req, res) => {
   try {
     if (await userModel.findOne({ email: req.body.email })) {
-      res.status(406).json({ error: `user is alredy present.` });
+      res.status(406).json({ err: `user is alredy present.` });
     } else {
       req.body.password = bcrypt.hashSync(req.body.password, 2);
       const user = userModel(req.body);
@@ -114,17 +114,19 @@ userRouer.post("/signup", async (req, res) => {
   }
 });
 userRouer.post("/login", async (req, res) => {
+  console.log(req.body)
   try {
     let user = await userModel.findOne({ email: req.body.email });
-    if (user.email) {
+    console.log(user);
+    if (user) {
       if (await bcrypt.compare(req.body.password, user.password)) {
 
         res.send({msg: "ok"})
       } else {
-        res.status(406).json({ error: `user password is worng..` });
+        res.status(406).json({ err: `user password is worng..` });
       }
     } else {
-      res.status(406).json({ msg: `user email is worng..` });
+      res.status(406).json({ err: `user email is worng..` });
     }
   } catch (err) {
     res.status(500).send({ err: err.message });
