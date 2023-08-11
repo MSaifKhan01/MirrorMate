@@ -8,7 +8,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:7777/user/auth/google/callback",
+      callbackURL: "https://nice-gold-cuttlefish-fez.cyclic.app/user/auth/google/callback",
     },
     async function (accessToken, refreshToken, profile, cb) {
       let user = {

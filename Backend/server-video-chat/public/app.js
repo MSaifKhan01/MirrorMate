@@ -12,7 +12,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "8080",
+  port: "mirrormate-server-videocall.onrender.com",
 });
 
 let myVideoStream;
@@ -198,7 +198,7 @@ leave_meetingBtn.addEventListener('click', (e) => {
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
     confirmButtonText: 'Yes, leave!'
-  }).then(async(result) => {
+  }).then((result) => {
     if (result.isConfirmed) {
       // Swal.fire(
       //   'Deleted!',
@@ -206,8 +206,9 @@ leave_meetingBtn.addEventListener('click', (e) => {
       //   'success'
       // )
 
-      // window.location.href='/door.ejs'
-      await fetch('/')
+
+      window.location.href='https://stalwart-cassata-e82d91.netlify.app/dashboard.html'
+
     }
   })
 })

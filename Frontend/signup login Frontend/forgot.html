@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Document</title>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
@@ -48,7 +48,7 @@ input {
  border-radius: 20px;
  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-   height: 400px;
+   height: 500px;
 }
 
 h2 {
@@ -137,94 +137,99 @@ button:hover {
 }
 
 @media only screen and (max-width: 768px) {
-  /* Styles for iPad */
+  body {
+    font-size: 16px;
+  }
+  
   .signup {
-    max-width: 400px;
-    padding: 40px 50px;
-    height: 350px;
+    max-width: 90%;
+    padding: 30px;
+    height: auto;
   }
-
+  
   h1 {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
-
+  
   h3 {
     font-size: 1rem;
   }
-
-  .signup__label {
+  
+  .signup__input {
     font-size: 1rem;
+    padding: 10px 2px;
   }
-
+  
   button {
     font-size: 1rem;
+    padding: 10px;
   }
 }
 
-@media only screen and (max-width: 480px) {
-  /* Styles for mobile */
-  .signup {
-    max-width: 300px;
-    padding: 30px 40px;
-    height: 300px;
-  }
-
-  h1 {
-    font-size: 1.2rem;
-  }
-
-  h3 {
-    font-size: 0.9rem;
-  }
-
-  .signup__label {
-    font-size: 0.9rem;
-  }
-
-  button {
-    font-size: 0.9rem;
-  }
-}
 
    </style>
 </head>
 <body>
-    
-
+    <!-- <h1>Mirror meet forgot password</h1>
+    <input type="email" id="email"placeholder="enter your email">
+    <button id="send">sent opt</button>
+    <input type="text" placeholder="enter your opt here" id="otp">
+    <input type="password" placeholder="enter new password" id="newPass">
+    <button id="change">Change password</button> -->
     <form class="signup" onsubmit="return false" autocomplete="off" id="form">
-        <h1 style="margin-bottom: 10px; padding-left: 25%;">Log In Here</h1>
-       
+        <h1 style="margin-bottom: 10px; padding-left: 15%;">Forgot Password?</h1>
       
         <div class="signup__field">
-          <input class="signup__input" type="email" name="email" id="email" required />
+          <input class="signup__input" type="text" name="email" id="email" required />
           <label class="signup__label" for="email">Email</label>
         </div>
       
-        <div class="signup__field">
-          <input class="signup__input" type="password" name="password" id="password" required />
-          <label class="signup__label" for="password">Password</label>
-        </div>
-      
-        <button id="btn">Log In</button>
+        
+            <button id="send"> Sent OTP</button>
         <br>
-        <a href="http://127.0.0.1:5501/signup%20login%20Frontend/forgot.html"><p>Forgot Password?</p></a>
+        
+        <div class="signup__field">
+          <input class="signup__input" type="password" id="otp" placeholder="Enter OTP " />
+          <label class="signup__label" >Enter OTP</label>
+        </div>
+        
+        <div class="signup__field">
+            <input class="signup__input" type="password" name="password" id="newPass"  />
+            <label class="signup__label" for="password">Password</label>
+          </div>
+        <button id="change">Change Password</button>
         
       </form>
-
-</form>
     
 </body>
 <script>
     let url = "https://nice-gold-cuttlefish-fez.cyclic.app"
-    let form = document.getElementById("form")
-    let btn = document.getElementById("btn")
-    btn.addEventListener("click" , (e)=>{
-        e.preventDefault()
-        let obj = {
-            email: form.email.value,
-            password: form.password.value
+    document.getElementById("send").addEventListener("click",()=>{
+        let obj ={
+            email:document.getElementById("email").value
         }
-        fetch(`${url}/user/login`, {
+        fetch(`${url}/user/email/forgot`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(obj)
+        }).then((res)=>{
+            return res.json()
+        }).then ((res) =>{
+            console.log("yes",res)
+            alert("opt sent on your email")
+        }).catch((error)=>{
+            console.log(error);
+        })
+    })
+    document.getElementById("change").addEventListener("click",()=>{
+        let obj ={
+            email:document.getElementById("email").value,
+            password:document.getElementById("newPass").value,
+            otp:document.getElementById("otp").value,
+        }
+        fetch(`${url}/user/forgot`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -235,18 +240,15 @@ button:hover {
         }).then ((res) =>{
             console.log("yes",res)
             if(res.error){
-                alert("wrong credentials")
+                alert("Wrong Opt")
             }else{
-                window.location.href = "http://127.0.0.1:5501/Frontend/dashboard.html"
-                console.log(res);
+                alert("Password Changed Successfully")
+                window.location.href = "./login.html"
             }
-            //
+            
         }).catch((error)=>{
             console.log(error);
         })
-
     })
-
 </script>
 </html>
-
