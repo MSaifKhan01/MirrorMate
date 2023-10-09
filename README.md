@@ -1,6 +1,6 @@
 # MirrorMate
 
-Our Diployed Link:[shimmering-dasik-b86b46.netlify.app/](https://shimmering-dasik-b86b46.netlify.app/)
+Our Diployed Link:https://mirror-meet.netlify.app
 
 Our screen share app is a versatile communication platform that combines the power of Socket.IO, WebRTC, Express, Node.js, HTTP, HTML, CSS, and JavaScript. With this app, users can seamlessly connect, chat, make video calls, and share their screens in real-time.
 
